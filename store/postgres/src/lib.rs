@@ -18,8 +18,7 @@ use graph::data::query::Trace;
 use graph::prelude::lazy_static;
 
 lazy_static! {
-    pub static ref TRACING_CONTROL: Arc<TracingControl<Trace>> =
-        Arc::new(TracingControl::default());
+    pub static ref TRACING_CONTROL: Arc<TracingControl<Trace>> = Arc::new(TracingControl::start());
 }
 
 mod advisory_lock;
